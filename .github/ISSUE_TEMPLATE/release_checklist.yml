@@ -1,0 +1,103 @@
+name: "🚢 Release Checklist"
+description: "Checklist for preparing a new software release"
+labels: ["release", "checklist"]
+assignees: [] # Assign to release manager or relevant team
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚀 Release Checklist for Version X.Y.Z
+
+        **Issue title (above):** _Update with the target version, e.g., "Release Checklist for Version 1.5.0"_
+
+  - type: input
+    id: release_version
+    attributes:
+      label: "Target Release Version"
+      description: "Specify the version number for this release."
+      placeholder: "e.g., 1.5.0"
+    validations:
+      required: true
+
+  - type: input
+    id: target_release_date
+    attributes:
+      label: "Target Release Date"
+      description: "Specify the planned release date."
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: pre_release_tasks
+    attributes:
+      label: "Pre-Release Tasks"
+      description: "Tasks to complete before the release."
+      options:
+        - label: "All planned features/bugfixes merged to release branch"
+          required: true
+        - label: "Code freeze implemented"
+          required: false
+        - label: "Final QA and regression testing completed"
+          required: true
+        - label: "All blocking bugs fixed and verified"
+          required: true
+        - label: "Performance and load testing completed (if applicable)"
+          required: false
+        - label: "Security audit/scan completed (if applicable)"
+          required: false
+        - label: "Release notes drafted and reviewed"
+          required: true
+        - label: "Documentation updated for new features/changes"
+          required: true
+        - label: "Build artifacts generated and verified"
+          required: true
+        - label: "Stakeholder approval obtained"
+          required: false
+
+  - type: checkboxes
+    id: release_tasks
+    attributes:
+      label: "Release Tasks"
+      description: "Tasks to perform during the release."
+      options:
+        - label: "Deploy to staging environment (if applicable)"
+          required: false
+        - label: "Final verification on staging"
+          required: false
+        - label: "Backup production environment"
+          required: true
+        - label: "Deploy to production environment"
+          required: true
+        - label: "Smoke tests on production passed"
+          required: true
+        - label: "Tag the release in version control (e.g., `git tag vX.Y.Z`)"
+          required: true
+        - label: "Merge release branch into main/master branch"
+          required: true
+        - label: "Merge release branch back into develop branch (if applicable)"
+          required: false
+
+  - type: checkboxes
+    id: post_release_tasks
+    attributes:
+      label: "Post-Release Tasks"
+      description: "Tasks to complete after the release."
+      options:
+        - label: "Announce release (blog post, social media, email)"
+          required: false
+        - label: "Monitor production for issues"
+          required: true
+        - label: "Close release milestone/version in issue tracker"
+          required: true
+        - label: "Conduct release retrospective (optional)"
+          required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Additional Notes (Optional)"
+      description: "Any other important information or context for this release."
+    validations:
+      required: false

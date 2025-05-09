@@ -1,0 +1,93 @@
+name: "User Story"
+description: "Define a user story with acceptance criteria and related tasks"
+labels: ["user-story", "feature"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📖 User Story Details
+
+        **Issue title (above):** _Use a concise description of the user story, e.g., "User Authentication Feature"_
+
+  - type: input
+    id: epic_link
+    attributes:
+      label: "Parent Epic (Optional)"
+      description: "Link the parent Epic if this story is part of a larger feature set (e.g., #123)"
+      placeholder: "#123"
+    validations:
+      required: false
+
+  - type: textarea
+    id: persona
+    attributes:
+      label: "Persona"
+      description: "Who is the primary user for this story?"
+      placeholder: "e.g., Registered User, Administrator, Guest Visitor"
+    validations:
+      required: true
+
+  - type: textarea
+    id: narrative
+    attributes:
+      label: "Narrative (As a... I want... So that...)"
+      description: "Clearly state the user's goal and the benefit."
+      placeholder: |
+        As a [type of user],
+        I want [to perform some action],
+        so that [I can achieve some goal/benefit].
+    validations:
+      required: true
+
+  - type: textarea
+    id: value_proposition
+    attributes:
+      label: "Value Proposition"
+      description: "What is the business value or user benefit of this story?"
+      placeholder: "e.g., Improves user engagement by simplifying the login process."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "List the specific, testable conditions that must be met for this story to be considered complete (one per line, as `- [ ] ...`)"
+      value: |-
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: "Related Tasks (Optional)"
+      description: "List any tasks that will be created to implement this user story (e.g., #45, #46). These can be added/updated later."
+      placeholder: |
+        - #TaskID1
+        - #TaskID2
+    validations:
+      required: false
+
+  - type: input
+    id: estimated_story_points
+    attributes:
+      label: "Estimated Story Points"
+      description: "Estimate the effort using story points (e.g., 1, 2, 3, 5, 8, 13)"
+      placeholder: "e.g., 5"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      description: "Select the priority of this user story"
+      options:
+        - "High"
+        - "Medium"
+        - "Low"
+    validations:
+      required: true
