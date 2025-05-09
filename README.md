@@ -2,22 +2,44 @@
 
 This repository serves as a collection of templates and guidelines to standardize and streamline team collaboration on GitHub. It includes:
 
-*   **Issue Templates:** Pre-defined templates for various types of issues to ensure consistent and complete information. You can find these in the `.github/ISSUE_TEMPLATE` directory. Specific templates include:
-    *   `bugfix.yml`: For reporting bugs or defects found in the application.
-    *   `docs_improvement.yml`: For suggesting improvements or reporting issues in documentation.
-    *   `feature_request.yml`: For proposing new features or enhancements.
-    *   `improvement.yml`: For suggesting general improvements to existing features, processes, or the codebase.
-    *   `release_checklist.yml`: A checklist to ensure all steps are followed for a new software release.
-    *   `story.yml`: For defining user stories, typically describing a feature from an end-user perspective.
-    *   `subtask.yml`: For breaking down larger tasks, stories, or bugs into smaller, manageable units of work.
-    *   `task.yml`: For creating general tasks that need to be tracked and completed.
-    *   `tech_debt.yml`: For identifying and tracking areas of technical debt that require refactoring or improvement.
+## Table of Contents
 
+*   [Issue Templates](#issue-templates)
+*   [GitHub Actions](#github-actions)
+*   [Commit Message Best Practices](#commit-message-best-practices)
+    *   [Default](#default)
+    *   [Merge Commit](#merge-commit)
+    *   [Revert Commit](#revert-commit)
+    *   [Initial Commit](#initial-commit)
+    *   [Types](#types)
+    *   [Scopes](#scopes)
+    *   [Breaking Changes Indicator](#breaking-changes-indicator)
+    *   [Description](#description)
+    *   [Body](#body)
+    *   [Footer](#footer)
+    *   [Versioning](#versioning)
+    *   [Examples](#examples)
 
-*   **GitHub Actions:**
-    *   [`cspell`](./.github/workflows/cspell.yml): Automatically checks for spelling errors in Markdown and text files using the [cspell action](https://github.com/streetsidesoftware/cspell-action). This helps maintain the quality and professionalism of the documentation and other text-based files in the repository.
+---
 
-*   **Commit Message Conventions:** Best practices for writing clear and informative commit messages, aiding in history tracking and automated changelog generation.
+## Issue Templates
+Pre-defined templates for various types of issues to ensure consistent and complete information. You can find these in the `.github/ISSUE_TEMPLATE` directory. Specific templates include:
+*   `bugfix.yml`: For reporting bugs or defects found in the application.
+*   `docs_improvement.yml`: For suggesting improvements or reporting issues in documentation.
+*   `feature_request.yml`: For proposing new features or enhancements.
+*   `improvement.yml`: For suggesting general improvements to existing features, processes, or the codebase.
+*   `release_checklist.yml`: A checklist to ensure all steps are followed for a new software release.
+*   `story.yml`: For defining user stories, typically describing a feature from an end-user perspective.
+*   `subtask.yml`: For breaking down larger tasks, stories, or bugs into smaller, manageable units of work.
+*   `task.yml`: For creating general tasks that need to be tracked and completed.
+*   `tech_debt.yml`: For identifying and tracking areas of technical debt that require refactoring or improvement.
+
+---
+
+## GitHub Actions
+*   [`cspell`](./.github/workflows/cspell.yml): Automatically checks for spelling errors in Markdown and text files using the [cspell action](https://github.com/streetsidesoftware/cspell-action). This helps maintain the quality and professionalism of the documentation and other text-based files in the repository.
+
+---
 
 The goal is to improve communication, maintain a clean project history, and make the development process more efficient.
 
@@ -44,7 +66,7 @@ Revert "<b>&lt;reverted commit subject line&gt;</b>"
 </pre>
 <sup>Follows default git revert message</sup>
 
-### Inital Commit
+### Initial Commit
 ```
 chore: init
 ```
