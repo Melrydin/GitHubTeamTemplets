@@ -1,0 +1,45 @@
+name: "CodeQL"
+
+on:
+  push:
+    branches: [ main ] # Or your primary branch
+  pull_request:
+    branches: [ main ] # Or your primary branch
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'javascript', 'python' , 'Java'] # Adjust based on languages in your templates
+        # For more languages, see the CodeQL documentation: https://gh.io/codeql-language-support
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: ${{ matrix.language }}
+        # If you wish to specify custom queries, you can do so here
+        # queries: +security-extended, +security-and-quality
+
+    # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, Java, Swift, Kotlin).
+    # If this step fails, then you should remove it and insert the build steps manually
+    # (see https://docs.github.com/en/code-security/code-scanning/configuring-code-scanning/configuring-code-scanning-for-compiled-languages)
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v3
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
+      with:
+        category: "/language:${{matrix.language}}"

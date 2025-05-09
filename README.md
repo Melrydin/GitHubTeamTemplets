@@ -38,6 +38,8 @@ Pre-defined templates for various types of issues to ensure consistent and compl
 
 ## GitHub Actions
 *   [`cspell`](./.github/workflows/cspell.yml): Automatically checks for spelling errors in Markdown and text files using the [cspell action](https://github.com/streetsidesoftware/cspell-action). This helps maintain the quality and professionalism of the documentation and other text-based files in the repository.
+*   [`gitleaks`](./.github/workflows/gitleaks.yml): Scans the repository for hardcoded secrets like passwords, API keys, and tokens using the [Gitleaks action](https://github.com/gitleaks/gitleaks-action). This helps prevent accidental exposure of sensitive information.
+*   [`CodeQL`](./.github/workflows/codeql-analysis.yml): Performs static analysis of the code to find security vulnerabilities and maintain code quality using [GitHub's CodeQL action](https://github.com/github/codeql-action). It supports various languages and helps identify potential issues early in the development process.
 
 ---
 
