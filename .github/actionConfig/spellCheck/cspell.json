@@ -7,7 +7,7 @@
     "dictionaryDefinitions": [
       {
         "name": "template",
-        "path": "./dictionary/template-dictionary.txt"
+        "path": "./dictionarys/template-dictionary.txt"
       }
     ]
   }
