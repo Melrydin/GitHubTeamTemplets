@@ -1,0 +1,13 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "dictionaries": [
+      "template"
+    ],
+    "dictionaryDefinitions": [
+      {
+        "name": "template",
+        "path": "./dictionary/template-dictionary.txt"
+      }
+    ]
+  }

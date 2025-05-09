@@ -15,6 +15,8 @@ jobs:
           files: |
             **/*.md
             **/*.txt
+          config: |
+            .github/actionConfig/spellCheck/cspell.json
           # The cspell action defaults to English.
           # For specific dictionaries or configurations,
           # you can add a cspell.json configuration file.
