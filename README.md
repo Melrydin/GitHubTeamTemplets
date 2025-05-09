@@ -13,6 +13,10 @@ This repository serves as a collection of templates and guidelines to standardiz
     *   `task.yml`: For creating general tasks that need to be tracked and completed.
     *   `tech_debt.yml`: For identifying and tracking areas of technical debt that require refactoring or improvement.
 
+
+*   **GitHub Actions:**
+    *   [`cspell`](./.github/workflows/cspell.yml): Automatically checks for spelling errors in Markdown and text files using the [cspell action](https://github.com/streetsidesoftware/cspell-action). This helps maintain the quality and professionalism of the documentation and other text-based files in the repository.
+
 *   **Commit Message Conventions:** Best practices for writing clear and informative commit messages, aiding in history tracking and automated changelog generation.
 
 The goal is to improve communication, maintain a clean project history, and make the development process more efficient.
