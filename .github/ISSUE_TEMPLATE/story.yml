@@ -30,14 +30,29 @@ body:
       required: true
 
   - type: textarea
-    id: narrative
+    id: story_start
     attributes:
-      label: "Narrative (As a... I want... So that...)"
-      description: "Clearly state the user's goal and the benefit."
-      placeholder: |
-        As a [type of user],
-        I want [to perform some action],
-        so that [I can achieve some goal/benefit].
+      label: "Start (As a...)"
+      description: "Describe the user or role."
+      placeholder: "As a [type of user]..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: story_action
+    attributes:
+      label: "Action (I want...)"
+      description: "Describe the action the user wants to perform."
+      placeholder: "I want [to perform some action]..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: story_result
+    attributes:
+      label: "Result (So that...)"
+      description: "Describe the benefit or goal the user achieves."
+      placeholder: "So that [I can achieve some goal/benefit]..."
     validations:
       required: true
 
