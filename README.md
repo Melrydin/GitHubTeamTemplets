@@ -19,6 +19,9 @@ This repository serves as a collection of templates and guidelines to standardiz
     *   [Footer](#footer)
     *   [Versioning](#versioning)
     *   [Examples](#examples)
+*   [Project Style Guidelines](#-project-style-guidelines)
+    *   [File Naming Conventions](#file-naming-conventions)
+    *   [Directory Structure Guidelines](#directory-structure-guidelines)
 
 ---
 
@@ -170,3 +173,69 @@ The `footer` should contain any information about **Breaking Changes** and is al
 The commit message guidelines presented here are based on established conventions, notably those popularized by Angular and detailed in resources such as the Gist by Bengt Brodersen.[^1]
 
 [^1]: The commit message guidelines are based on the Gist by Bengt Brodersen: [https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13).
+
+---
+
+## 📝 Project Style Guidelines
+
+This section outlines recommended conventions for file naming and project structure to promote consistency, clarity, and maintainability in software projects.
+
+### File Naming Conventions
+
+Adopting a consistent file naming strategy is crucial for project organization.
+
+*   **Consistency is Key:** Choose a style and stick to it. Common casing styles include:
+    *   `kebab-case`: All lowercase with hyphens (e.g., `my-module-file.js`). Often preferred for web projects (HTML, CSS, JS files) and configuration files.
+    *   `snake_case`: All lowercase with underscores (e.g., `my_python_script.py`, `database_connection.java`). Common in Python and some other backend languages.
+    *   `PascalCase` (or `UpperCamelCase`): Capitalized words concatenated (e.g., `MyClass.cs`, `UserProfileComponent.jsx`). Often used for class names and UI components.
+    *   `camelCase`: First word lowercase, subsequent words capitalized (e.g., `myVariableName.js`, `dataProcessingService.ts`). Common for variables and function names in many languages.
+*   **Descriptive Names:** File names should clearly indicate their content or purpose. Avoid overly generic names like `utils.js` or `script.py` without further context if possible.
+*   **Lowercase for Web/Config:** For files served by web servers or cross-platform configuration files, sticking to lowercase (`kebab-case` or `snake_case`) is generally safer to avoid case-sensitivity issues.
+*   **Extensions:** Always use appropriate and standard file extensions (e.g., `.js`, `.py`, `.java`, `.md`, `.yml`, `.json`).
+
+**Example Scenarios:**
+
+*   A JavaScript module for user authentication: `user-authentication.js` (kebab-case)
+*   A Python script for data processing: `data_processing_script.py` (snake_case)
+*   A C# class definition: `CustomerModel.cs` (PascalCase)
+*   A general configuration file: `config.yml` or `settings.json`
+
+### Directory Structure Guidelines
+
+A well-organized directory structure makes it easier to locate files, understand the project\'s architecture, and onboard new team members. While the ideal structure varies by project type and language/framework, here are some general principles:
+
+*   **Source Code (`src` or `lib`):**
+    *   Place the main application/library source code in a dedicated directory, commonly named `src` (for "source") or `lib` (for "library").
+    *   Within `src`, group files by feature, module, or type (e.g., `src/components/`, `src/services/`, `src/models/` or `src/user-management/`, `src/order-processing/`).
+*   **Tests (`tests` or `test`):**
+    *   Keep test files separate from source code but in a clearly identifiable directory, often `tests` or `test`.
+    *   Mirror the source code structure within the test directory to make it easy to find corresponding tests (e.g., `tests/services/userService.test.js` for `src/services/userService.js`).
+*   **Documentation (`docs`):**
+    *   Store project documentation (beyond READMEs) in a `docs` directory. This can include API documentation, architectural diagrams, and usage guides.
+*   **Configuration (`config`):**
+    *   Centralize environment-specific or application-wide configuration files in a `config` directory.
+*   **Assets/Static Files (`public`, `static`, `assets`):**
+    *   For web projects, place publicly accessible static files (images, stylesheets, fonts) in a directory like `public`, `static`, or `assets`.
+*   **Scripts (`scripts`):**
+    *   Utility scripts for build processes, deployment, or development tasks can be placed in a `scripts` directory.
+*   **`.github` Directory (for GitHub repositories):**
+    *   Store GitHub-specific files here:
+        *   `ISSUE_TEMPLATE/`: Issue form templates.
+        *   `workflows/`: GitHub Actions workflow files.
+        *   `PULL_REQUEST_TEMPLATE.md`: Default pull request template.
+*   **Root Directory:**
+    *   Keep the root directory clean. It should typically contain:
+        *   `README.md`
+        *   License file (e.g., `LICENSE`)
+        *   Contribution guidelines (e.g., `CONTRIBUTING.md`)
+        *   Changelog (e.g., `CHANGELOG.md`)
+        *   Project configuration files (e.g., `package.json`, `requirements.txt`, `.gitignore`).
+
+**General Principles for Structure:**
+
+*   **Modularity:** Structure the project so that components or modules are loosely coupled and can be understood and modified independently.
+*   **Separation of Concerns:** Group files based on their role or functionality.
+*   **Scalability:** Choose a structure that can accommodate project growth.
+*   **Framework Conventions:** If using a specific framework (e.g., React, Django, Spring), adhere to its established directory structure conventions first, then adapt as needed.
+
+These guidelines provide a starting point. The most important aspect is to choose a structure and naming convention that makes sense for your project and team, and then apply it consistently.
