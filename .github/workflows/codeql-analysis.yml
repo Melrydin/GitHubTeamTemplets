@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript', 'Java'] # Adjust based on languages in your templates
+        language: [ 'javascript'] # Adjust based on languages in your templates
         # For more languages, see the CodeQL documentation: https://gh.io/codeql-language-support
 
     steps:
