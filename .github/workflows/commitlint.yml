@@ -1,0 +1,21 @@
+name: Lint Commit Messages
+on: [pull_request]
+
+jobs:
+  commitlint:
+    name: Check Commit Message
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Required to load all commits in the PR
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Or your preferred LTS version
+      - name: Install commitlint and conventional config
+        run: npm install --save-dev @commitlint/config-conventional @commitlint/cli
+      - name: Lint commit messages
+        uses: wagoid/commitlint-github-action@v6
+        with:
+          configFile: .github/actionConfig/commitlint/commitlint.config.js
