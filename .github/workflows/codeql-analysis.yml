@@ -31,7 +31,7 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         # If you wish to specify custom queries, you can do so here
-        # queries: +security-extended, +security-and-quality
+        queries: +security-extended, +security-and-quality
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, Java, Swift, Kotlin).
     # If this step fails, then you should remove it and insert the build steps manually
