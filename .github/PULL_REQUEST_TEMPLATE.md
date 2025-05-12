@@ -44,14 +44,8 @@ Before submitting your PR, please ensure the following:
 
 Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration.
 
-- [ ] Test A
-- [ ] Test B
-
-**Test Configuration:**
-* Firmware version:
-* Hardware:
-* Toolchain:
-* SDK:
+- [ ] Unit Test
+- [ ] E2E
 
 ---
 
@@ -67,7 +61,7 @@ If your changes include UI modifications, please add screenshots to show the bef
 
 ---
 
-##  अतिरिक्त Notes (Optional)
+## Notes (Optional)
 
 Add any other context or information about the PR here.
 <!-- Any other information that is important to this PR such as diagrams, links, etc. -->
